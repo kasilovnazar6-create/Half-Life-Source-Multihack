@@ -1,16 +1,1 @@
-name: Build
 
-on: [push]
-
-jobs:
-  build:
-    runs-on: windows-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.1
-      
-    - name: Build Project
-      run: msbuild HLS_Multihack.sln /p:Configuration=Release /p:Platform=Win32
