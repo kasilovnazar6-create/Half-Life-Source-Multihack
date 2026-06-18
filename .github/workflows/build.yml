@@ -12,5 +12,5 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
       
-    - name: Build Debug x64
-      run: msbuild HLS_Multihack.sln /p:Configuration=Debug /p:Platform=x64
+    - name: Build
+      run: msbuild HLS_Multihack.sln
