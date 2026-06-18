@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2019
     
     steps:
     - uses: actions/checkout@v2
@@ -12,5 +12,5 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
       
-    - name: Build
-      run: msbuild HLS_Multihack.sln
+    - name: Build Release Win32
+      run: msbuild HLS_Multihack.sln /p:Configuration=Release /p:Platform=x86
